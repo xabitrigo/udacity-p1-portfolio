@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Polymer Test</title>
+    <script type="text/javascript"
+            src="bower_components/webcomponentsjs/webcomponents.min.js">
+    </script>
+    <link rel="import" href="elements/work-item.html">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/main.css" rel="stylesheet" media="screen">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+<div class="main-container">
+<header>
+    <img src="./images/logo.png">
+    <div class="main-title">
+    <h1>JANE DOETTE</h1>
+    <h2>FRONT-END NINJA</h2>
+    </div>
+</header>
+<section class="main-image">
+    <img src="./images/img_principal.png">
+</section>
+<section class="featured-work">
+    <h3>Featured Work</h3>
+
+    <div class="row gutter-10 works">
+        <work-item image_name="img1" title="APPIFY" url="https://github.com/udacity/Appify/"></work-item>
+        <work-item image_name="img2" title="SUNFLOWER" url="https://github.com/udacity/Sunflower/"></work-item>
+        <work-item image_name="img3" title="BOKEH" url="https://github.com/udacity/Bokeh/"></work-item>
+    </div>
+</section>
+<script src="bower_components/jquery/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</div>
+</body>
+</html>

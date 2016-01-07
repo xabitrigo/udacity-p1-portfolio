@@ -1,23 +1,13 @@
 {
-  "name": "udacity-p1",
-  "authors": [
-    "muffinzap <carlos@galicloud.com>"
-  ],
-  "description": "Udacity Project 1",
-  "main": "",
-  "moduleType": [],
-  "license": "MIT",
-  "homepage": "https://github.com/xabitrigo/udacity-p1-portfolio",
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
+  "name": "kk2-borramehostia",
+  "version": "0.0.0",
   "dependencies": {
-    "bootstrap": "~3.3.6",
+    "bootstrap": "~3.0.0",
+    "font-awesome": "~4.0.0",
+    "modernizr": "~2.6.2",
+    "jquery": "~1.9.1",
     "polymer": "~1.2.3"
-  }
+  },
+  "devDependencies": {}
 }
+
