@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Polymer Test</title>
+    <title>P1 - Portfolio</title>
     <script type="text/javascript"
             src="bower_components/webcomponentsjs/webcomponents.min.js">
     </script>
@@ -16,15 +16,21 @@
 <body>
 <div class="main-container">
 <header>
-    <div id="text_and_logo">
-        <img src="./images/logo.png" alt="Udacity logo">
-        <div class="main-title">
+    <div id="text-and-logo" class="row no-gutter">
+        <div id="logo" class="col-md-4">
+            <img src="images/logo.png" alt="Udacity logo">
+        </div>
+        <div id="main-title" class="col-md-8">
             <h1>JANE DOETTE</h1>
             <h2>FRONT-END NINJA</h2>
         </div>
     </div>
-    <div id="main_image">
-        <img src="./images/img_principal.png" alt="Main image">
+    <div id="main-image">
+        <img alt="Main image"
+             src="images/img_principal_1200.jpg"
+             srcset="images/img_principal_800.jpg 800w, images/img_principal_1200.jpg 1200w "
+             sizes="(min-width: 800px) 1200px, 800px"
+                >
     </div>
 </header>
 <section class="featured-work">

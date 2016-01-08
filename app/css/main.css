@@ -7294,6 +7294,12 @@ td.visible-print {
 .fa-plus-square-o:before {
   content: "\f196";
 }
+@font-face {
+  font-family: 'Work-Sans-Thin';
+  src: url('../fonts/Work-Sans-Thin.ttf.woff') format('woff'), url('../fonts/Work-Sans-Thin.ttf.svg#Work-Sans-Thin') format('svg'), url('../fonts/Work-Sans-Thin.ttf.eot'), url('../fonts/Work-Sans-Thin.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -7303,35 +7309,48 @@ td.visible-print {
 .jumbotron {
   margin: 50px auto 0 auto;
 }
+.row.no-gutter > [class*=col-] {
+  padding-left: 0;
+  padding-right: 0;
+}
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
 .main-container {
   max-width: 1200px;
   margin: 0 auto;
 }
-header {
-  padding-bottom: 15px;
+header #text-and-logo {
   border-bottom: 3px solid #bcbbbb;
+  padding-bottom: 15px;
   margin-bottom: 20px;
 }
-.main-title {
+header #main-image img {
+  width: 100%;
+  height: auto;
+}
+header #main-title {
   display: inline-block;
   float: right;
 }
 h1 {
+  font-family: 'Work-Sans-Thin';
   font-size: 4em;
   display: block;
   text-align: right;
   color: black;
 }
 h2 {
+  font-family: 'Work-Sans-Thin';
+  font-weight: bold;
   text-align: right;
   color: black;
 }
 h3 {
+  font-family: 'Work-Sans-Thin';
+  font-weight: bold;
   color: #bcbbbb;
-}
-.main-image img {
-  width: 100%;
-  height: auto;
 }
 .row .col {
   text-align: center;
