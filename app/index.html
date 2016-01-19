@@ -2,8 +2,10 @@
 <html>
 <head>
     <title>P1 - Portfolio</title>
+    <!-- build:js scripts/vendor/webcomponents.js -->
     <script type="text/javascript"
             src="bower_components/webcomponentsjs/webcomponents.min.js">
+    <!-- endbuild -->
     </script>
     <link rel="import" href="elements/work-item.html">
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -43,8 +45,14 @@
             <work-item image_name="img3" title="BOKEH" url="https://github.com/udacity/Bokeh/"></work-item>
         </div>
     </section>
+    <!-- build:js scripts/main.js -->
     <script src="bower_components/jquery/jquery.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/hello.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/bootstrap.js -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- endbuild -->
 </div>
 </body>
 </html>
