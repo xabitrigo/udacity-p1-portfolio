@@ -297,9 +297,9 @@ module.exports = function (grunt) {
     'copy:server',
     'useminPrepare',
     'concurrent',
-    'cssmin',
-    'concat',
-    'uglify',
+//    'cssmin',
+//    'concat',
+//    'uglify',
     'copy',
     'rev',
     'usemin'
