@@ -124,7 +124,7 @@ module.exports = function (grunt) {
     less: {
       dist: {
         files: {
-          '<%= yeoman.app %>/css/main.css': ['<%= yeoman.app %>/styles/main.less']
+          '<%= yeoman.app %>/styles/main.css': ['<%= yeoman.app %>/styles/main.less']
         },
         options: {
           sourceMap: true,
@@ -151,7 +151,7 @@ module.exports = function (grunt) {
           src: [
             '<%= yeoman.dist %>/scripts/{,*/}*.js',
             '<%= yeoman.dist %>/styles/{,*/}*.css',
-            '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
+//            '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
             '<%= yeoman.dist %>/fonts/{,*/}*.*'
           ]
         }
@@ -167,7 +167,12 @@ module.exports = function (grunt) {
       html: ['<%= yeoman.dist %>/{,*/}*.html'],
       css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
       options: {
-        dirs: ['<%= yeoman.dist %>']
+        dirs: ['<%= yeoman.dist %>'],
+        blockReplacements: {
+          import: function (block) {
+            return '<link rel="import" href="' + block.dest + '">';
+          }
+        }
       }
     },
     imagemin: {
@@ -231,8 +236,11 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             'fonts/{,*/}*.*',
+            'elements/{,*/}*.*',
+            'scripts/vendor/{,*/}*.*',
             '.htaccess',
-            'images/{,*/}*.{webp,gif}'
+            'images/{,*/}*.{webp,gif}',
+//            'images/{,*/}*.{webp,gif,png,jpg,jpeg}'
           ]
         }]
       },
@@ -249,6 +257,13 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.app %>/bower_components/bootstrap/dist/fonts/',
           dest: '<%= yeoman.app %>/fonts/glyphicons',
           src: ['*']
+        }, {
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.app %>/bower_components/polymer/',
+          dest: '<%= yeoman.app %>/scripts/vendor/polymer',
+//          src: ['*']
+          src: ['*.html']
         }]
       }
     },
@@ -297,9 +312,9 @@ module.exports = function (grunt) {
     'copy:server',
     'useminPrepare',
     'concurrent',
-//    'cssmin',
-//    'concat',
-//    'uglify',
+    'cssmin',
+    'concat',
+    'uglify',
     'copy',
     'rev',
     'usemin'
