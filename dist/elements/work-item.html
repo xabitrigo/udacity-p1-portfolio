@@ -1,0 +1,39 @@
+<link rel="import" href="../scripts/vendor/polymer/polymer.html">
+<dom-module id="work-item">
+    <template>
+        <article>
+            <figure>
+                <img alt="{{title}}"
+                     src="images/{{image_name}}_1000x650.jpg"
+                     srcset="images/{{image_name}}_400x260.jpg 400w, images/{{image_name}}_1000x650.jpg 1000w "
+                     sizes="(min-width: 1000px) 400px, 1000px"
+                        >
+            </figure>
+            <h3>{{title}}</h3>
+            <p>
+                <a href="{{url}}">{{url}}</a>
+            </p>
+        </article>
+    </template>
+
+    <script>
+        Polymer({
+            is: "work-item",
+            properties: {
+                image_name: {
+                    type: String,
+                    value: "front end web development2"
+                },
+                title: {
+                    type: String,
+                    value: "title"
+                },
+                url: {
+                    type: String,
+                    value: "www.example.com"
+                }
+            }
+        });
+    </script>
+
+</dom-module>
